@@ -1,0 +1,97 @@
+.jsx = means javascript extensions
+- this extension lets developers write html in javascript code
+
+REACT writes code declaratively 
+
+however (.jsx), is NOT supported by browsers
+
+instead, .jsx in transformed to code that works with browser, like sass
+
+COMPONENTS:
+- essentially a js function
+- but with special rules:
+  1. Must start with a capital letter
+  2. Must return a renderable value
+    a. to be rendered html markup
+
+
+BUILT IN COMPONENTS:
+- lowercase
+- ex: <header>, <p>, <h5>
+
+CUSTOM COMPONENTS:these are custom made by developers
+- uppercase
+- ex: <Header>
+  - these will eventually  be turned to more primitive build in html componenets by REACT
+
+-JSX allows you to define the target UI / HTML code right inside your JavaScript code and therefore right inside your components.
+
+
+-Your JSX code leads to a tree-like code structure that "tells" React how the different components are related and how the UI should look like. It then executes appropriate commands to manipulate the real DOM to reflect that target structure / code.
+
+Question 6:
+How do you typically use custom components?
+
+error alert:
+Incorrect answer. Please try again.
+That's wrong. Whilst you will indeed use ReactDOM's render() method to render the root component of your app, you'll not use that method to output all your custom components.
+
+correct ans:
+You use custom componenets like HTML elements inside of JSX code
+
+
+
+------------------------------
+PROPS:
+MAKING COMPONENTS REUSABLE WITH PROPS
+
+props are data passed into components, so you can use them
+
+
+NOT ALL PROPERTIES ARE EXPLICITLY SET TO THE PROPS OBJ
+
+-------------------------------
+EX: props.children:
+-refers to the text that is between the componenet tags
+  a. can be text
+  b. or complex jsx structures
+
+-------------------------------
+ The built-in elements support props like onClick to allow you to define functions that should be triggered when the specified event occurs.
+
+ ------------------------------
+ To execute code upon events, which value must be passed to event props like onClick?
+ - A pointer function to what function should be executed
+
+ -------------------------------
+
+By wrapping the execution of your event handling function with another function, it's that other function that's passed as a value to the event-handling prop. Therefore, your main function (=> handleClick in this example) does NOT get executed too early but instead only when the event occurs.
+
+---------------------------------
+Q: What's the purpose of "State" in React apps?
+
+A: Its data that, when changed, causes React to re-evaluate a component
+
+Question 2:
+There are two "Rules of Hooks".
+
+Which of the following statements is NOT TRUE according to those rules?
+
+A: You must not call React Hooks next to other Hooks
+
+One of the rules of HOOKS is that you cannot have it inside a nested function
+
+Q: What's the idea behind "derived state" / "computed values"?
+
+A: Computed values are values that shouldn't be managed as separae state since they can be derived from other state
+
+-
+Certainly, let's break down that statement:
+
+"A: Computed values are values that shouldn't be managed as separate state since they can be derived from other state."
+
+In simpler terms:
+
+"A: Computed values are like extra pieces of information that your React component can figure out on its own. You don't need to keep track of them as a separate piece of information because they can be calculated from the other things your component already knows about."
+
+For example, if you have the width and height of a rectangle as separate state values, you don't need to store the area as a separate piece of state because you can calculate it anytime you need it using the formula area = width * height. The area is a computed value derived from the other state values (width and height).
